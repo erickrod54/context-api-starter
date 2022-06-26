@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app-style{
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+
+.title-span{
+  text-transform: capitalize;
+  text-decoration: underline;
+  color: blueviolet;
+}
+
+.description-span{
+  text-transform: capitalize;
+  font-size: medium;
+  color:crimson;
+  font-weight: 700px;
+}
+
+.single-data-span{
+  text-transform: capitalize;
+  font-size: medium;
+  color:cadetblue;
+  font-weight: 700px;
+}
