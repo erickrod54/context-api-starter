@@ -2,12 +2,10 @@ import React from "react";
 import { AppContext } from "./context";
 import FirstComponent from "./components/first.component";
 
-/** Context-api-app version 1 - 'App' js file - Features: 
+/** Context-api-app version 2 - 'App' js file - Features: 
  *  
- *          ---> Importing and Placing 'AppContext'
- *              -to consume data from it- 
- * 
- *          ---> Testing data Provided by 'AppProvider'.
+ *          ---> Getting state and functionality in order
+ *                to implement it on the Component.
  * 
  * Notes: So '<App />' will become in 'AppProvider' > 
  * 'children'
@@ -18,15 +16,21 @@ import FirstComponent from "./components/first.component";
 
 function App() {
 
+  const { show, handleShow } = React.useContext(AppContext)
 
-  const data = React.useContext(AppContext)
+  console.log(' value provided on App js  =>', show)
 
-  console.log('this is Provided on App js ==>', data)
   return (
     <>
+      
       <h2>Context Api App</h2>
-      <h2>the value is: {data}</h2>
-      <FirstComponent />
+      <h2>this is App js </h2>
+        <button onClick={ () => handleShow() }>
+          Hide/Show Action
+        </button>
+
+      { show && <FirstComponent />}
+
     </>
   );
 }
